@@ -59,23 +59,23 @@ This system provides a **real-time gesture recognition interface** using **Media
 
 ### 3.1 Directory Structure
 
-gesture-edu/
-├── assets/
-│ └── gesturalogo.png
-├── backend/
-│ ├── gestures.json
-│ ├── lessons.py
-│ ├── lessons_endpoint.py
-│ ├── main.py
-│ ├── secret.env
-│ └── venv/
-├── index.html
-├── playground.html
-├── predictor.html
-├── scripts.js
-├── styles.css
-├── .gitignore
-└── README.md
+gesture-edu/  
+├── assets/  
+│ └── gesturalogo.png  
+├── backend/  
+│ ├── gestures.json  
+│ ├── lessons.py  
+│ ├── lessons_endpoint.py  
+│ ├── main.py  
+│ ├── secret.env  
+│ └── venv/  
+├── index.html  
+├── playground.html  
+├── predictor.html  
+├── scripts.js  
+├── styles.css  
+├── .gitignore  
+└── README.md  
 
 
 ### 3.2 Backend Setup
