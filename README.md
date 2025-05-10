@@ -85,3 +85,95 @@ cd your/extracted/location/gesture-edu
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+```
+
+### 3.3 Run the Backend Server
+```bash
+cd backend
+python3 -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+```
+
+### 3.4 Launch the Web Frontend
+Open index.html in your browser to access the user interface.
+
+## 4. Gesture Matching Algorithm
+
+### 4.1 Dynamic Time Warping (DTW)
+
+- Compares similarity between two time-series sequences.
+- FastDTW reduces complexity from **O(N²)** to **O(N)**.
+- Ideal for real-time applications.
+
+### 4.2 Matching Stages
+
+Gesture progression:
+- Start → Mid1 → Mid2 → End
+- System uses a timeout mechanism to reset the sequence if the user pauses too long.
+
+### 4.3 DTW vs. CNN Comparison
+
+| Metric               | Gesture Detection (DTW)     | CNN (Deep Learning)         |
+|----------------------|-----------------------------|------------------------------|
+| **Training**         | No training needed          | Requires labeled dataset     |
+| **Real-Time**        | Yes                         | Slower without GPU           |
+| **Accuracy**         | Moderate                    | High                         |
+| **Time Complexity**  | O(G × N × M)                | O(C × D × F)                 |
+| **Space Complexity** | O(G × N × 3)                | High                         |
+| **Speed**            | Fast                        | Slower                       |
+| **Scalability**      | Very scalable               | Limited by model size        |
+| **Hardware**         | Low requirements            | GPU required                 |
+| **Flexibility**      | High (record anytime)       | Low (requires retraining)    |
+| **Error Rate**       | Higher                      | Lower                        |
+| **Ease of Use**      | Simple setup                | Complex ML pipeline          |
+
+---
+
+## 5. Complexity Analysis
+
+### 5.1 Time Complexity
+
+ - O(G × N × M)
+ - G = number of predefined gestures
+ - N = keypoints per frame (typically 2 × 11 = 22)
+ - M = number of recorded frames (typically 4)
+
+
+### 5.2 Space Complexity
+
+ - O(G × N × 3)
+ - G = number of gestures
+ - N = number of keypoints per gesture
+ - 3D = (x, y, z) per keypoint
+
+---
+
+## 6. Conclusion
+
+This gesture detection system offers a powerful, real-time, and low-resource solution for intuitive control and educational use cases. Its dynamic nature allows gesture definitions at runtime, making it extremely flexible and user-friendly without deep learning overhead.
+
+---
+
+## 7. Future Improvements
+
+- 🔧 **Gesture refinement**  
+  Increase the number of keypoints or consider temporal smoothing for better accuracy.
+
+- 🧠 **Support complex gestures**  
+  Add multi-pose gestures, hand-pose + face-expression combinations.
+
+- 🧭 **Angle & position invariance**  
+  Improve normalization to support gestures at different hand orientations.
+
+---
+
+## 📬 Feedback
+
+Have suggestions or found a bug? Please open an [Issue](https://github.com/your-repo/issues) or submit a pull request.
+
+---
+
+## 📄 License
+
+MIT License. See [`LICENSE`](./LICENSE) for more info.
+
+
