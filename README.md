@@ -1,4 +1,4 @@
-# ✋ Gesture Detection System
+# ✋ Gestura-EDU: Bridging the gap
 
 A real-time gesture recognition system using hand landmarks and Dynamic Time Warping (DTW). Lightweight and efficient — no deep learning models required. Define gestures on-the-fly and link them to commands for intuitive interaction.
 
@@ -168,12 +168,8 @@ This gesture detection system offers a powerful, real-time, and low-resource sol
 
 ## 📬 Feedback
 
-Have suggestions or found a bug? Please open an [Issue](https://github.com/your-repo/issues) or submit a pull request.
+Have suggestions or found a bug? Please open an [Issue](mailto:abhishekkcrs@gmail.com) or submit a pull request.
 
 ---
-
-## 📄 License
-
-MIT License. See [`LICENSE`](./LICENSE) for more info.
 
 
